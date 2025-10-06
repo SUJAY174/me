@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sujay Movie Review & Rating Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes rgb-cycle {
+        0%   { --brand-primary-rgb: hsl(46, 92%, 53%); } /* Original #F5C518 */
+        16%  { --brand-primary-rgb: hsl(0, 90%, 60%); }   /* Red */
+        33%  { --brand-primary-rgb: hsl(120, 90%, 60%); } /* Green */
+        50%  { --brand-primary-rgb: hsl(240, 90%, 60%); } /* Blue */
+        66%  { --brand-primary-rgb: hsl(300, 90%, 60%); } /* Magenta */
+        83%  { --brand-primary-rgb: hsl(60, 90%, 60%); }  /* Yellow */
+        100% { --brand-primary-rgb: hsl(46, 92%, 53%); }
+      }
+      html.theme-rgb {
+        animation: rgb-cycle 8s linear infinite;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': 'var(--brand-primary-rgb, #F5C518)',
+              'brand-secondary': '#121212',
+              'brand-bg': '#000000',
+              'brand-light': '#FFFFFF',
+              'brand-muted': '#AAAAAA',
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
